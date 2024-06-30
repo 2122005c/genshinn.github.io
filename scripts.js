@@ -1,5 +1,5 @@
-let teamATime = 180; // 3 minutes in seconds
-let teamBTime = 180; // 3 minutes in seconds
+let teamATime = 240; // 3 minutes in seconds
+let teamBTime = 240; // 3 minutes in seconds
 let teamATimer;
 let teamBTimer;
 let teamABanCount = 0;
@@ -7,7 +7,7 @@ let teamBBanCount = 0;
 let teamAPickCount = 0;
 let teamBPickCount = 0;
 const maxBanCount = 2;
-const maxPickCount = 4;
+const maxPickCount = 8;
 
 function startTimer(team) {
     if (team === 'team-a') {
@@ -59,7 +59,7 @@ function banCharacter(team) {
             logHistory('team-a', `banned ${character}`);
         }
         
-        teamATime = 180; // Reset time for next turn
+        teamATime = 240; // Reset time for next turn
         document.getElementById('team-a-timer').textContent = formatTime(teamATime);
         
         if (teamABanCount < maxBanCount) {
@@ -82,7 +82,7 @@ function banCharacter(team) {
             logHistory('team-b', `banned ${character}`);
         }
         
-        teamBTime = 180; // Reset time for next turn
+        teamBTime = 240; // Reset time for next turn
         document.getElementById('team-b-timer').textContent = formatTime(teamBTime);
         
         if (teamBBanCount < maxBanCount) {
@@ -109,7 +109,7 @@ function pickCharacter(team) {
             logHistory('team-a', `picked ${character}`);
         }
         
-        teamATime = 180; // Reset time for next turn
+        teamATime = 240; // Reset time for next turn
         document.getElementById('team-a-timer').textContent = formatTime(teamATime);
         
         if (teamAPickCount < maxPickCount) {
@@ -132,7 +132,7 @@ function pickCharacter(team) {
             logHistory('team-b', `picked ${character}`);
         }
         
-        teamBTime = 180; // Reset time for next turn
+        teamBTime = 240; // Reset time for next turn
         document.getElementById('team-b-timer').textContent = formatTime(teamBTime);
         
         if (teamBPickCount < maxPickCount) {
